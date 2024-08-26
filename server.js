@@ -16,7 +16,11 @@ const app = express();
 app.use(cors())
 
 app.use(express.json());
-
+app.get('/',(req,res)=>{
+    res.json({
+        message:"hello there"
+    })
+})
 app.use('/api/users', userRoutes);
 app.use('/api/books', bookRoutes);
 
